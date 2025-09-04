@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO | B-Max Engineering</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat, #f4f6fa;
+            color: #232946;
+            min-height: 100vh;
+            position: relative;;
+        }
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: url('https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;
+    opacity: 0.8;
+    filter: brightness(0.3); /* Decrease brightness */
+    z-index: 0;
+}
+body {
+    position: relative;
+    /* Remove the background image from here if you use ::before */
+    background: #f4f6fa;
+}
+        header {
+            background: #232946;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            box-shadow: 0 6px 32px rgba(35,41,70,0.10);
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+        }
+        .logo {
+            position: relative;
+            z-index: 2;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #f96d00;
+            text-shadow: 0 2px 12px rgba(249,109,0,0.18);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.38rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding: 6px 18px;
+            border-radius: 24px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-radius 0.2s;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #fff;
+            background: #ff6a3d;
+            box-shadow: 0 2px 12px rgba(249,109,0,0.13);
+        }
+        .ceo-profile {
+            max-width: 420px;
+            margin: 3.5rem auto 2.5rem auto;
+            background: linear-gradient(120deg, #fff 60%, #f96d00 100%);
+            border-radius: 1rem;
+            box-shadow: 0 4px 32px rgba(35,41,70,0.10);
+            padding: 2.2rem 1.5rem 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .ceo-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 16px rgba(35,41,70,0.10);
+            border: 3px solid #f96d00;
+            margin-bottom: 1.2rem;
+            background: #e0e0e0;
+        }
+        .ceo-profile h2 {
+            font-size: 1.35rem;
+            color: #232946;
+            margin-bottom: 0.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .ceo-title {
+            color: #f96d00;
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.3px;
+        }
+        .ceo-profile p {
+            font-size: 0.98rem;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .ceo-quote {
+            font-style: italic;
+            color: #232946;
+            background: #f7f7fa;
+            border-left: 3px solid #f96d00;
+            padding: 0.4rem 0.8rem;
+            margin: 0.8rem 0 0.2rem 0;
+            border-radius: 0.3rem;
+            font-size: 0.95rem;
+        }
+        .ceo-contact {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.7rem;
+            justify-content: center;
+        }
+        .ceo-contact a {
+            color: #fff;
+            background: #f96d00;
+            padding: 0.45rem 1rem;
+            border-radius: 1.2rem;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(249,109,0,0.10);
+        }
+        .ceo-contact a:hover {
+            background: #232946;
+            color: #f96d00;
+        }
+        .services h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            color: #ff6a3d;
+            margin-bottom: 2.5rem;
+            letter-spacing: 1px;
+        }
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            justify-content: center;
+        }
+        .service-item {
+            background: linear-gradient(120deg, #1a2238 0%, #ff6a3d 100%);
+            color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(255,106,61,0.13);
+            padding: 2rem 1.5rem;
+            min-width: 260px;
+            max-width: 340px;
+            flex: 1 1 260px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(255,106,61,0.22);
+        }
+        .service-item h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 0.7rem;
+            letter-spacing: 0.5px;
+        }
+        .service-item p {
+            font-size: 1.08rem;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        footer {
+            background: #232946;
+            color: #fff;
+            text-align: center;
+            padding: 0.8rem 0 0.8rem 0;
+            font-size: 0.93rem;
+            border-radius: 0 0 0.7rem 0.7rem;
+            margin: 1.2rem 0.7rem 0.5rem 0.7rem;
+            box-shadow: 0 2px 8px rgba(35,41,70,0.06);
+        }
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                padding: 8px 2px;
+            }
+            nav ul {
+                gap: 7px;
+                flex-wrap: wrap;
+            }
+            nav a {
+                font-size: 0.95rem;
+                padding: 3px 0;
+            }
+            .ceo-profile {
+                padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <div class="logo">
+            <img src="logo.jpg" alt="B-Max Engineering Logo" style="height:120px; width:120px; display:block; border-radius:50%; object-fit:cover; box-shadow:0 4px 16px rgba(30,41,59,0.13);" />
+        </div>
+        <nav>
+            <ul>
+                       <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ceo.html" class="active">CEO</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="ceo-profile">
+        <div class="ceo-photo">
+            <img src="ceo.jpg" alt="Belay Tiruneh" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;" />
+        </div>
+        <h2>Belay Tiruneh</h2>
+        <div class="ceo-title">Chief Executive Officer</div>
+        <p>With over 20 years of experience in the engineering and construction industry, Belay Tiruneh has led B-Max Engineering to become a trusted name in the sector. His visionary leadership and commitment to excellence have driven the company to new heights.</p>
+        <div class="ceo-quote">“Success is built on a foundation of integrity, innovation, and teamwork.”</div>
+        <div class="ceo-contact">
+            <a href="mailto:belay.tiruneh@bmaxengineering.com">Email</a>
+            <a href="tel:+251900000000">Call</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 B-Max Engineering and Contractor. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

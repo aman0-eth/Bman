@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contractor Projects</title>
+    <style>
+        :root {
+            --primary: #1a2238;
+            --accent: #ff6a3d;
+            --bg: #fcfcfc;
+            --white: #fff;
+            --shadow: 0 8px 32px rgba(26,34,56,0.10), 0 1.5px 8px rgba(30,41,59,0.08);
+            --gradient: linear-gradient(120deg, #1a2238 60%, #ff6a3d 100%);
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #1d2330 70%, #f3ad17 100%);
+            color: #222;
+            font-size: 1.08rem;
+
+            
+        }
+         body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('bg2.jpg') ;background-size: cover;
+            background-position: center;
+            z-index: -1; 
+            opacity: 0.5;}
+
+        header {
+            background: var(--primary);
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 48px;
+            box-shadow: 0 4px 16px rgba(26,34,56,0.08);
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+        }
+        .logo img {
+            height: 48px;
+            filter: drop-shadow(0 2px 8px rgba(26,34,56,0.12));
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.39rem;
+            letter-spacing: 0.5px;
+            padding: 6px 18px;
+            border-radius: 18px;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #fff;
+            background: var(--accent);
+            box-shadow: 0 2px 12px rgba(255,106,61,0.13);
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto 3.5rem auto;
+            background: var(--white);
+            border-radius: 2.5rem;
+            box-shadow: var(--shadow);
+            padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+            min-height: 60vh;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.7rem;
+            color:#1a2238;
+            margin-bottom: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+        }
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .project {
+            background: var(--bg);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 16px rgba(26,34,56,0.10);
+            border: 1.5px solid #e0e7ff;
+            padding: 18px 12px 14px 12px;
+            width: 240px;
+            text-align: center;
+            transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+        }
+        .project:hover {
+            box-shadow: 0 16px 48px rgba(255,106,61,0.18);
+            transform: translateY(-6px) scale(1.05);
+            border-color: var(--accent);
+        }
+        .project img {
+            width: 100%;
+            max-width: 200px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 1rem;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 16px rgba(26,34,56,0.13);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project:hover img {
+            transform: scale(1.07) rotate(-2deg);
+            box-shadow: 0 12px 32px rgba(255,106,61,0.18);
+        }
+        .project h3 {
+            margin: 0;
+            font-size: 1.18rem;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2.2rem 0 2.2rem 0;
+            font-size: 1.18rem;
+            border-radius: 0 0 2.5rem 2.5rem;
+            margin: 3.5rem 2.5rem 1.7rem 2.5rem;
+            box-shadow: 0 2px 24px rgba(30,41,59,0.13);
+            letter-spacing: 0.6px;
+        }
+        @media (max-width: 900px) {
+            main {
+                padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+            }
+            .project-list {
+                gap: 16px;
+            }
+        }
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                padding: 18px 10px;
+            }
+            main {
+                padding: 1rem 0.2rem 1rem 0.2rem;
+                border-radius: 1.2rem;
+            }
+            .project-list {
+                gap: 8px;
+            }
+            .project {
+                width: 98vw;
+                max-width: 340px;
+                padding: 10px 4px 8px 4px;
+            }
+            footer {
+                padding: 24px 0 10px 0;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="B-Max Engineering Logo" style="height:120px; width:120px; display:block; border-radius:50%; object-fit:cover; box-shadow:0 4px 16px rgba(30,41,59,0.13);" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ceo.html">CEO</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Our Projects</h1>
+        <div class="project-list" id="projectList"></div>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>Email: realbmax.dev@gmail.com</p>
+            <p>Phone: +251913102558</p>
+            <p>+251940124046</p>
+        </div>
+        <div class="social-links">
+            <a href="https://instagram.com/bmaxoffical" target="_blank">
+                <img src="insta.png" alt="Instagram" style="width:45px;height:30px;">
+            </a>
+        </div>
+    </footer>
+    <script>
+        const projects = [
+            {
+                id: 1,
+                name: "Realestate Construction",
+                image: "rl.jpg",
+                location: "Addis Ababa, Ethiopia",
+                description: [
+                    "Completed a modern real estate in Jemo,Addis Ababa.",
+                    "Incorporated sustainable building practices and materials.",
+                ]
+            },
+            {
+                id: 2,
+                name: "Apartment Building",
+                image: "ap.jpg",
+                location: "Addis Ababa, Ethiopia",
+                description: [
+                    "Constructed a 30-story commercial skyscraper in the heart of Addis Ababa.",
+                    "Features energy-efficient glass facade and smart building systems.",
+                    "Created over 100 jobs during construction."
+                ]
+            },
+            {
+                id: 3,
+                name: "Highway Expansion",
+                image: "hw.jpg",
+                location: "Addis Ababa to Adama, Ethiopia",
+                description: [
+                    "Expanded 30km of highway to 4 lanes, reducing travel time by 40%.",
+                    "Installed modern lighting and safety barriers.",
+                    "Boosted logistics and economic growth in the region."
+                ]
+            },
+            {
+                id: 4,
+                name: "Residential Complex",
+                image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+                location: "Bole, Addis Ababa, Ethiopia",
+                description: [
+                    "Developed a gated community with 200+ modern apartments.",
+                    "Amenities include parks, playgrounds, and a community center.",
+                    "Focus on sustainable materials and green spaces."
+                ]
+            },
+        ];
+        const projectList = document.getElementById('projectList');
+        projects.forEach(project => {
+            const div = document.createElement('div');
+            div.className = 'project';
+            div.innerHTML = `
+                <img src="${project.image}" alt="${project.name}">
+                <h3>${project.name}</h3>
+                <p style="font-size:1rem;color:#444;margin:0.5em 0 0.2em 0;"><strong>Location:</strong> ${project.location}</p>
+                <div style="text-align:left;font-size:0.98rem;color:#333;margin:0.2em 0 0.5em 1.1em;">
+                    <span style="font-weight:600; color:#1a2238;">Project Highlights:</span>
+                    <ul style="margin:0.2em 0 0.5em 1.1em;">
+                        ${project.description.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                <p style="font-size:0.95rem;color:#888;margin:0.2em 0 0 0;">(All projects located in Ethiopia)</p>
+            `;
+            projectList.appendChild(div);
+        });
+    </script>
+</body>
+</html>

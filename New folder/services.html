@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | B-Max Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;600;500;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #232946;
+            --accent: #d8792b;
+            --bg: #f4f6fa;
+            --white: #fff;
+            --glass: rgba(255,255,255,0.18);
+            --shadow: 0 8px 32px rgba(35,41,70,0.10), 0 1.5px 8px rgba(30,41,59,0.08);
+            --gradient: linear-gradient(120deg, #232946 60%, #f96d00 100%);
+            --service-gradient: linear-gradient(120deg, #232946 0%, #f96d00 100%);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f6fa 60%, #e9e4f0 100%);
+            color: #232946;
+            min-height: 100vh;
+        }
+         body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('ceo-bg.jpg') center center/cover no-repeat;
+            opacity: 0.6;
+        z-index: 0;}
+        header {
+            background: transparent;
+            color: #232946;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px 16px 32px;
+            box-shadow: none;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            position: relative;
+            top: 0;
+            z-index: 10;
+            animation: fadeInDown 1s;
+            backdrop-filter: none;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 2.1rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--accent);
+            text-shadow: 0 2px 12px rgba(249,109,0,0.18);
+            font-family: 'Montserrat', sans-serif;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #232946;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.38rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding: 6px 18px;
+            border-radius: 0;
+            transition: border-bottom 0.3s;
+        }
+        /* Remove underline effect */
+        nav a:hover, nav a.active {
+            color: #fff;
+            background: var(--accent);
+            border-radius: 24px;
+            box-shadow: 0 2px 12px rgba(216,121,43,0.13);
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            background-color: #232172;
+        
+        }
+        .services {
+            max-width: 1100px;
+            margin: 2.2rem auto 2rem auto;
+            background: var(--glass);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(35,41,70,0.10);
+            padding: 2rem 1.2rem 1.5rem 1.2rem;
+            animation: fadeInUp 1.2s;
+            backdrop-filter: blur(8px) saturate(1.2);
+            border: 1.5px solid rgba(255,255,255,0.13);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .services h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #0e2053;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.7px;
+            font-weight: 700;
+        }
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .service-item {
+            background: var(--service-gradient);
+            color: var(--white);
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(35,41,70,0.13);
+            padding: 1.2rem 1rem;
+            min-width: 200px;
+            max-width: 300px;
+            flex: 1 1 200px;
+            transition: transform 0.22s, box-shadow 0.22s;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1.5s;
+        }
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .service-item:hover {
+            transform: translateY(-8px) scale(1.04) rotate(-1deg);
+            box-shadow: 0 16px 48px rgba(56,189,248,0.22);
+        }
+        .service-item h3 {
+            margin-top: 0;
+            font-size: 1.13rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.3px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        .service-item p {
+            font-size: 0.98rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+        .service-item .icon {
+            font-size: 1.7rem;
+            margin-bottom: 0.5rem;
+            display: block;
+            filter: drop-shadow(0 2px 8px rgba(35,41,70,0.13));
+            position: relative;
+            z-index: 1;
+        }
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 1.2rem 0 1.2rem 0;
+            font-size: 1rem;
+            border-radius: 0 0 1rem 1rem;
+            margin: 2rem 1rem 0.7rem 1rem;
+            box-shadow: 0 2px 12px rgba(35,41,70,0.10);
+            letter-spacing: 0.4px;
+        }
+        @media (max-width: 1200px) {
+            .services {
+                max-width: 99vw;
+                padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+            }
+        }
+        @media (max-width: 900px) {
+            .service-list {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .services {
+                padding: 0.4rem 0.1rem 0.4rem 0.1rem;
+            }
+            header {
+                flex-direction: column;
+                padding: 8px 2px;
+            }
+            nav ul {
+                gap: 7px;
+                flex-wrap: wrap;
+            }
+            nav a {
+                font-size: 0.95rem;
+                padding: 3px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
+            <img src="logo.jpg" alt="B-Max Engineering Logo" style="height:120px; width:120px; border-radius:50%; object-fit:cover; box-shadow:0 4px 16px rgba(30,41,59,0.13); margin-left:0;" />
+        </div>
+        <nav>
+            <ul style="display: flex; justify-content: center; gap: 24px; margin: 0; padding: 0; list-style: none;">
+               <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" >About</a></li>
+                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html"class="active">Services</a></li>
+                <li><a href="ceo.html">CEO</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <span class="icon">🏗️</span>
+                <h3>Civil Engineering</h3>
+                <p>Comprehensive civil engineering solutions for infrastructure projects, including roads, bridges, and public works.</p>
+            </div>
+            <div class="service-item">
+                <span class="icon">🛠️</span>
+                <h3>Construction Management</h3>
+                <p>End-to-end project management for seamless execution, quality control, and timely delivery.</p>
+            </div>
+            <div class="service-item">
+                <span class="icon">🏢</span>
+                <h3>Building Design</h3>
+                <p>Innovative architectural and structural design for residential, commercial, and industrial buildings.</p>
+            </div>
+            <div class="service-item">
+                <span class="icon">🌱</span>
+                <h3>Sustainable Solutions</h3>
+                <p>Eco-friendly construction practices and green building technologies for a better future.</p>
+            </div>
+            <div class="service-item">
+                <span class="icon">🔧</span>
+                <h3>Maintenance & Renovation</h3>
+                <p>Comprehensive maintenance, repair, and renovation services to extend the life of your assets.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 B-Max Engineering and Contractor. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+</html>

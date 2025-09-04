@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-Max Engineering and Contractor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;600;500;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a2238;
+            --accent: #cc481f;
+            --bg: #f4f6fa;
+            --white: #fff;
+            --glass: rgba(255,255,255,0.25);
+            --shadow: 0 8px 32px rgba(26,34,56,0.10), 0 1.5px 8px rgba(30,41,59,0.08);
+            --gradient: linear-gradient(120deg, #1a2238 100%, #f09d92 60%);
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #222;
+        font-size: 1.08rem;
+                min-height: 100vh; }
+    body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('bg.jpg') ;background-size: cover;
+            background-position: center;
+            z-index: -1; 
+            opacity: 1;}
+            
+            
+                header {
+            background: blue;
+            color: #232946;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px 16px 32px;
+            box-shadow: none;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            position: relative;
+            top: 0;
+            z-index: 10;
+            animation: fadeInDown 1s;
+            backdrop-filter: none;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 2.1rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--accent);
+            text-shadow: 0 2px 12px rgba(249,109,0,0.18);
+            font-family: 'Montserrat', sans-serif;
+        }
+        header {
+            background: transparent;
+            color: #232946;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px 16px 32px;
+            box-shadow: none;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            position: relative;
+            top: 0;
+            z-index: 10;
+            animation: fadeInDown 1s;
+            backdrop-filter: none;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+            color: var(--accent);
+            text-shadow: 1px 2px 18px rgba(255,106,61,0.22);
+            font-family: 'Montserrat', sans-serif;
+        }
+       
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            padding: 6px 18px;
+            border-radius: 24px;
+            transition:background 0.2s, color 0.2s, box-shadow 0.2s, border-radius 0.2s;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #fff;
+            background: #ff6a3d;
+            box-shadow: 0 2px 12px rgba(255,106,61,0.13);
+        }
+        .hero {
+            background: none;
+            color: var(--white);
+            padding: 6.5rem 0 4.5rem 0;
+            text-align: center;
+            border-radius: 0 0 3.5rem 3.5rem;
+            box-shadow: none;
+            margin-bottom: 3.5rem;
+            position: relative;
+            overflow: hidden;
+            filter: none;
+            opacity: 0.9; /* decreased from 2 */
+        }
+        .hero::before {
+            display: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1.2s;
+            background: rgba(255,255,255,0.7);
+            border-radius: 2rem;
+            display: inline-block;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 4px 24px rgba(26,34,56,0.10);
+        }
+        .hero h1 {
+            font-size: 2.9rem;
+            margin-bottom: 0rem;
+            padding: 0.2em 0;
+            font-weight: 12000;
+            letter-spacing: 2.5px;
+            text-shadow: 0 4px 32px rgba(26,34,56,0.22);
+            text-shadow:
+                0 2px 8px rgba(26,34,56,0.75),
+                0 0 8px #ff6a3d;
+                color:#1a2238
+        }
+        .hero p {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin: 0 auto;
+            max-width: 700px;
+            opacity: 0.98;
+            letter-spacing: 0.3px;
+            color: #1a2238;
+        }
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto 3.5rem auto;
+            background: var(--glass);
+            border-radius: 2.5rem;
+            box-shadow: var(--shadow);
+            padding: 4rem 3.5rem 3.5rem 3.5rem;
+            display: flex;
+            gap: 3.5rem;
+            align-items: center;
+            animation: fadeInUp 1.3s;
+            backdrop-filter: blur(8px) saturate(1.2);
+            border: 1.5px solid rgba(255,255,255,0.18);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .about-img {
+            flex: 1 1 340px;
+            min-width: 260px;
+            max-width: 380px;
+            border-radius: 1.8rem;
+            overflow: hidden;
+            box-shadow: 0 8px 36px rgba(26,34,56,0.16);
+            border: 5px solid var(--accent);
+            background: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .about-img:hover {
+            transform: scale(1.04) rotate(-2deg);
+            box-shadow: 0 16px 48px rgba(255,106,61,0.18);
+        }
+        .about-img img {
+            width: 100%;
+            display: block;
+            border-radius: 1.2rem;
+            filter: grayscale(8%) contrast(1.10);
+            transition: filter 0.3s;
+        }
+        .about-img img:hover {
+            filter: none;
+        }
+        .about-content {
+            flex: 2 1 600px;
+        }
+        .about-content h2 {
+            font-size: 2.7rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+        }
+        .about-content p {
+            font-size: 1.22rem;
+            line-height: 1.85;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .about-content ul {
+            padding-left: 1.5rem;
+            margin: 0 0 1.5rem 0;
+        }
+        .about-content li {
+            font-size: 1.16rem;
+            margin-bottom: 0.7rem;
+            color: #444;
+            position: relative;
+            padding-left: 1.3em;
+        }
+        .about-content li::before {
+            content: '\272A';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-size: 1.1em;
+            top: 0.1em;
+            text-shadow: 0 2px 8px rgba(255,106,61,0.18);
+        }
+        .values-section {
+            max-width: 1200px;
+            margin: 0 auto 3.5rem auto;
+            background: var(--glass);
+            border-radius: 2.5rem;
+            box-shadow: var(--shadow);
+            padding: 3.5rem 3.5rem 2.5rem 3.5rem;
+            animation: fadeInUp 1.5s;
+            backdrop-filter: blur(8px) saturate(1.2);
+            border: 1.5px solid rgba(255,255,255,0.18);
+        }
+        .values-section h3 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1.7rem;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            text-align: center;
+        }
+        .values-list {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .value-item {
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 36px rgba(255,106,61,0.18);
+            padding: 2.2rem 1.7rem;
+            min-width: 240px;
+            max-width: 340px;
+            flex: 1 1 240px;
+            margin-bottom: 1.7rem;
+            text-align: center;
+            font-size: 1.22rem;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+            transition: transform 0.22s, box-shadow 0.22s;
+            position: relative;
+            overflow: hidden;
+        }
+        .value-item::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .value-item:hover {
+            transform: translateY(-10px) scale(1.06) rotate(-1deg);
+            box-shadow: 0 16px 48px rgba(255,106,61,0.22);
+        }
+        .value-item span {
+            position: relative;
+            z-index: 1;
+        }
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2.2rem 0 2.2rem 0;
+            font-size: 1.18rem;
+            border-radius: 0 0 2.5rem 2.5rem;
+            margin: 3.5rem 2.5rem 1.7rem 2.5rem;
+            box-shadow: 0 2px 24px rgba(30,41,59,0.13);
+            letter-spacing: 0.6px;
+        }
+        @media (max-width: 1200px) {
+            .about-section, .values-section {
+                max-width: 99vw;
+                padding: 2.2rem 1rem 2.2rem 1rem;
+            }
+        }
+        @media (max-width: 900px) {
+            .about-section {
+                flex-direction: column;
+                padding: 2rem 1rem 1.5rem 1rem;
+                gap: 1.5rem;
+            }
+            .values-section {
+                padding: 1.5rem 1rem 1rem 1rem;
+            }
+        }
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                padding: 18px 10px;
+            }
+            nav ul {
+                gap: 18px;
+            }
+            .hero {
+                padding: 2.5rem 0 1.5rem 0;
+            }
+            .about-section, .values-section {
+                padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+            }
+            .values-list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="logo">
+            <img src="logo.jpg" alt="B-Max Engineering Logo" style="height:120px; width:120px; display:block; border-radius:50%; object-fit:cover; box-shadow:0 4px 16px rgba(30,41,59,0.13);" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ceo.html">CEO</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content" style="background: rgba(255,255,255,0.7); border-radius: 2rem; display: inline-block; padding: 2.5rem 3rem; box-shadow: 0 4px 24px rgba(26,34,56,0.10);">
+            <h1>About B-Max Engineering & Contractor</h1>
+            <p>Building Excellence, Delivering Trust. Your trusted partner in engineering and construction.</p>
+        </div>
+    </section>
+    <section class="about-section">
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="B-Max Engineering Team">
+        </div>
+        <div class="about-content">
+            <h2>Welcome to B-Max Engineering</h2>
+            <p>B-Max Engineering and Contractor is a leading provider of innovative engineering and construction solutions. With a commitment to quality, safety, and client satisfaction, we deliver projects that stand the test of time.</p>
+            <ul>
+                <li>Over 15 years of industry experience</li>
+                <li>Expert team of engineers and project managers</li>
+                <li>Cutting-edge technology and sustainable practices</li>
+                <li>On-time and on-budget project delivery</li>
+            </ul>
+            <p>We believe in building lasting relationships with our clients, partners, and communities.</p>
+        </div>
+    </section>
+    <section class="values-section">
+        <h3>Our Core Values</h3>
+        <div class="values-list">
+            <div class="value-item"><span>Integrity & Transparency</span></div>
+            <div class="value-item"><span>Innovation & Excellence</span></div>
+            <div class="value-item"><span>Safety & Sustainability</span></div>
+            <div class="value-item"><span>Client-Centric Approach</span></div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 B-Max Engineering and Contractor. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+

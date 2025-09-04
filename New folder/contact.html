@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | B-Max Engineering</title>
+    <style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat, linear-gradient(120deg, #e0e7ff 0%, #f4f6fa 40%, #c9e4ff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+        header {
+            background: transparent;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            box-shadow: none;
+        }
+        .logo h1 {
+            display: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #eee0dc;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.38rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-radius 0.2s;
+            position: relative;
+            padding: 6px 18px;
+            border-radius: 24px;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #fff;
+            background: #ff6a3d;
+            box-shadow: 0 2px 12px rgba(255,106,61,0.13);
+        }
+        .contact {
+            max-width: 520px;
+            margin: 3.5rem auto 2.5rem auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px rgba(26,34,56,0.13), 0 1.5px 8px rgba(30,41,59,0.09);
+            padding: 2.8rem 2.2rem 2.5rem 2.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) 0.1s both;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: none; }
+        }
+        .contact h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color:#0e2053;
+            margin-bottom: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        label {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #1a2238;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #f4f6fa;
+            border-radius: 0.7rem;
+            padding: 0.2rem 0.8rem;
+            border: 1.5px solid #d1d5db;
+            transition: border 0.2s;
+        }
+        .input-group:focus-within {
+            border: 1.5px solid #ff6a3d;
+        }
+        .input-group svg {
+            margin-right: 0.7rem;
+            color: #ff6a3d;
+            min-width: 22px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 1rem;
+            width: 100%;
+            padding: 0.7rem 0;
+            resize: vertical;
+            color: #222;
+        }
+        textarea {
+            min-height: 90px;
+        }
+        button[type="submit"] {
+            background: linear-gradient(120deg, #1a2238 0%, #ff6a3d 100%);
+            color: #fff;
+            border: none;
+            border-radius: 0.7rem;
+            padding: 0.95rem 0;
+            font-size: 1.13rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(255,106,61,0.13);
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(120deg, #ff6a3d 0%, #1a2238 100%);
+            transform: translateY(-2px) scale(1.03);
+            color: #fff;
+        }
+        .contact-info {
+            background: rgba(244,246,250,0.85);
+            border-radius: 0.8rem;
+            padding: 1.2rem 1rem;
+            box-shadow: 0 2px 12px rgba(30,41,59,0.10);
+            margin-top: 1.5rem;
+            color: #1a2238;
+            font-size: 1.08rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .contact-info p {
+            margin: 0.2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        footer {
+            background: linear-gradient(90deg, #1a2238 60%, #ff6a3d 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem 0 1.2rem 0;
+            font-size: 1rem;
+            border-radius: 0 0 1.2rem 1.2rem;
+            margin: 2rem 2rem 1rem 2rem;
+            box-shadow: 0 2px 12px rgba(30,41,59,0.12);
+        }
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+                padding: 18px 10px;
+                background: #1a2238;
+            }
+            .contact {
+                padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+                background: rgba(255,255,255,0.98);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="B-Max Engineering Logo" style="height:120px; width:120px; display:block; border-radius:50%; object-fit:cover; box-shadow:0 4px 16px rgba(30,41,59,0.13);" />
+        </div>
+        <nav>
+            <ul>
+               
+                       <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ceo.html">CEO</a></li>
+                <li><a href="contact.html"  class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="POST" autocomplete="off">
+            <div class="input-group">
+                <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M2.5 18c0-3.314 3.134-6 7-6s7 2.686 7 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="5.5" width="17" height="11" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 6.5l7.5 6 7.5-6" stroke="currentColor" stroke-width="1.5"/></svg>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group" style="align-items: flex-start;">
+                <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="4.5" width="15" height="13" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 8.5h9M6.5 11.5h9M6.5 14.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 5.5A2.5 2.5 0 0 1 5 3h10a2.5 2.5 0 0 1 2.5 2.5v9A2.5 2.5 0 0 1 15 17H5a2.5 2.5 0 0 1-2.5-2.5v-9Z" stroke="#ff6a3d" stroke-width="1.5"/><path d="m3.5 6.5 6.5 5 6.5-5" stroke="#ff6a3d" stroke-width="1.5"/></svg> realbmax.dev@gmail.com</p>
+            <p><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="2.5" width="15" height="15" rx="7.5" stroke="#ff6a3d" stroke-width="1.5"/><path d="M10 6.5v3.5l2.5 2.5" stroke="#ff6a3d" stroke-width="1.5" stroke-linecap="round"/></svg> +251913102558</p>
+            <p><svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 8.5A6.5 6.5 0 0 1 10 2a6.5 6.5 0 0 1 6.5 6.5c0 4.5-6.5 9-6.5 9s-6.5-4.5-6.5-9Z" stroke="#ff6a3d" stroke-width="1.5"/><circle cx="10" cy="8.5" r="2" stroke="#ff6a3d" stroke-width="1.5"/></svg> Addis Ababa,Ethiopia</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 B-Max Engineering and Contractor. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
